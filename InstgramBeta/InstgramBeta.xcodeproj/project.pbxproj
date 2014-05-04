@@ -19,6 +19,38 @@
 		8871E21019079D85001723EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871E1F819079D84001723EE /* UIKit.framework */; };
 		8871E21819079D85001723EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8871E21619079D85001723EE /* InfoPlist.strings */; };
 		8871E21A19079D85001723EE /* InstgramBetaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8871E21919079D85001723EE /* InstgramBetaTests.m */; };
+		888CF660190F4463001BA2F1 /* InstgramTextBaseRun.m in Sources */ = {isa = PBXBuildFile; fileRef = 888CF65F190F4463001BA2F1 /* InstgramTextBaseRun.m */; };
+		888CF663190F48EA001BA2F1 /* InstgramTextAtRun.m in Sources */ = {isa = PBXBuildFile; fileRef = 888CF662190F48EA001BA2F1 /* InstgramTextAtRun.m */; };
+		888CF666190F4902001BA2F1 /* InstgramTextUrlRun.m in Sources */ = {isa = PBXBuildFile; fileRef = 888CF665190F4902001BA2F1 /* InstgramTextUrlRun.m */; };
+		888CF669190F491F001BA2F1 /* InstgramTextEmojiRun.m in Sources */ = {isa = PBXBuildFile; fileRef = 888CF668190F491F001BA2F1 /* InstgramTextEmojiRun.m */; };
+		888CF66B190F4B85001BA2F1 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 888CF66A190F4B85001BA2F1 /* CoreText.framework */; };
+		888CF66E190F87B7001BA2F1 /* InstgramCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 888CF66D190F87B7001BA2F1 /* InstgramCoreTextView.m */; };
+		889037A31915D2EB00A52C3C /* [smile].png in Resources */ = {isa = PBXBuildFile; fileRef = 889037A21915D2EA00A52C3C /* [smile].png */; };
+		889358491908AE5600148BA5 /* InstgramRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 889358481908AE5600148BA5 /* InstgramRootViewController.m */; };
+		8893584C1908AEBB00148BA5 /* InstgramLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893584B1908AEBB00148BA5 /* InstgramLoginViewController.m */; };
+		8893584F1908B2AE00148BA5 /* InstgramTabbarBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893584E1908B2AE00148BA5 /* InstgramTabbarBaseViewController.m */; };
+		889358521908B32200148BA5 /* InstgramMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 889358511908B32200148BA5 /* InstgramMainViewController.m */; };
+		889358551908B42000148BA5 /* UINavigationController+InstgramNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 889358541908B42000148BA5 /* UINavigationController+InstgramNavigationController.m */; };
+		889358581908B7E700148BA5 /* InstgramNearByViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 889358571908B7E700148BA5 /* InstgramNearByViewController.m */; };
+		8893585B1908B7FC00148BA5 /* InstgramHotRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893585A1908B7FC00148BA5 /* InstgramHotRankViewController.m */; };
+		8893585E1908B80A00148BA5 /* InstgramPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893585D1908B80A00148BA5 /* InstgramPersonalViewController.m */; };
+		889358611908B81A00148BA5 /* InstgramRelatedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 889358601908B81A00148BA5 /* InstgramRelatedViewController.m */; };
+		889358641908B82700148BA5 /* InstgramTakePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 889358631908B82700148BA5 /* InstgramTakePhotoViewController.m */; };
+		889358711908D5CE00148BA5 /* hotRank.png in Resources */ = {isa = PBXBuildFile; fileRef = 889358671908D5CE00148BA5 /* hotRank.png */; };
+		889358721908D5CE00148BA5 /* hotRank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 889358681908D5CE00148BA5 /* hotRank@2x.png */; };
+		889358731908D5CE00148BA5 /* nearBy.png in Resources */ = {isa = PBXBuildFile; fileRef = 889358691908D5CE00148BA5 /* nearBy.png */; };
+		889358741908D5CE00148BA5 /* nearBy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8893586A1908D5CE00148BA5 /* nearBy@2x.png */; };
+		889358751908D5CE00148BA5 /* personal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8893586B1908D5CE00148BA5 /* personal.png */; };
+		889358761908D5CE00148BA5 /* personal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8893586C1908D5CE00148BA5 /* personal@2x.png */; };
+		889358771908D5CE00148BA5 /* related.png in Resources */ = {isa = PBXBuildFile; fileRef = 8893586D1908D5CE00148BA5 /* related.png */; };
+		889358781908D5CE00148BA5 /* related@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8893586E1908D5CE00148BA5 /* related@2x.png */; };
+		889358791908D5CE00148BA5 /* takePhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 8893586F1908D5CE00148BA5 /* takePhoto.png */; };
+		8893587A1908D5CE00148BA5 /* takePhoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 889358701908D5CE00148BA5 /* takePhoto@2x.png */; };
+		889358841908DD7E00148BA5 /* InstgramSystem_Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 889358831908DD7E00148BA5 /* InstgramSystem_Info.m */; };
+		889358871908DE0200148BA5 /* InstgramFoudation.m in Sources */ = {isa = PBXBuildFile; fileRef = 889358861908DE0200148BA5 /* InstgramFoudation.m */; };
+		8893588B1908E05500148BA5 /* nav_bar_bg_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 889358881908E05500148BA5 /* nav_bar_bg_ios7@2x.png */; };
+		8893588C1908E05500148BA5 /* nav_bar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 889358891908E05500148BA5 /* nav_bar_bg@2x.png */; };
+		8893588D1908E05500148BA5 /* tabbarBackgroud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8893588A1908E05500148BA5 /* tabbarBackgroud@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +80,55 @@
 		8871E21519079D85001723EE /* InstgramBetaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InstgramBetaTests-Info.plist"; sourceTree = "<group>"; };
 		8871E21719079D85001723EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8871E21919079D85001723EE /* InstgramBetaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstgramBetaTests.m; sourceTree = "<group>"; };
+		888CF65E190F4463001BA2F1 /* InstgramTextBaseRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstgramTextBaseRun.h; sourceTree = "<group>"; };
+		888CF65F190F4463001BA2F1 /* InstgramTextBaseRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstgramTextBaseRun.m; sourceTree = "<group>"; };
+		888CF661190F48EA001BA2F1 /* InstgramTextAtRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstgramTextAtRun.h; sourceTree = "<group>"; };
+		888CF662190F48EA001BA2F1 /* InstgramTextAtRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstgramTextAtRun.m; sourceTree = "<group>"; };
+		888CF664190F4902001BA2F1 /* InstgramTextUrlRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstgramTextUrlRun.h; sourceTree = "<group>"; };
+		888CF665190F4902001BA2F1 /* InstgramTextUrlRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstgramTextUrlRun.m; sourceTree = "<group>"; };
+		888CF667190F491F001BA2F1 /* InstgramTextEmojiRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstgramTextEmojiRun.h; sourceTree = "<group>"; };
+		888CF668190F491F001BA2F1 /* InstgramTextEmojiRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstgramTextEmojiRun.m; sourceTree = "<group>"; };
+		888CF66A190F4B85001BA2F1 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		888CF66C190F87B7001BA2F1 /* InstgramCoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstgramCoreTextView.h; sourceTree = "<group>"; };
+		888CF66D190F87B7001BA2F1 /* InstgramCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstgramCoreTextView.m; sourceTree = "<group>"; };
+		889037A21915D2EA00A52C3C /* [smile].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "[smile].png"; sourceTree = "<group>"; };
+		889358471908AE5600148BA5 /* InstgramRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstgramRootViewController.h; sourceTree = "<group>"; };
+		889358481908AE5600148BA5 /* InstgramRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstgramRootViewController.m; sourceTree = "<group>"; };
+		8893584A1908AEBB00148BA5 /* InstgramLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstgramLoginViewController.h; sourceTree = "<group>"; };
+		8893584B1908AEBB00148BA5 /* InstgramLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstgramLoginViewController.m; sourceTree = "<group>"; };
+		8893584D1908B2AE00148BA5 /* InstgramTabbarBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstgramTabbarBaseViewController.h; sourceTree = "<group>"; };
+		8893584E1908B2AE00148BA5 /* InstgramTabbarBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstgramTabbarBaseViewController.m; sourceTree = "<group>"; };
+		889358501908B32200148BA5 /* InstgramMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstgramMainViewController.h; sourceTree = "<group>"; };
+		889358511908B32200148BA5 /* InstgramMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstgramMainViewController.m; sourceTree = "<group>"; };
+		889358531908B42000148BA5 /* UINavigationController+InstgramNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+InstgramNavigationController.h"; sourceTree = "<group>"; };
+		889358541908B42000148BA5 /* UINavigationController+InstgramNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+InstgramNavigationController.m"; sourceTree = "<group>"; };
+		889358561908B7E700148BA5 /* InstgramNearByViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstgramNearByViewController.h; sourceTree = "<group>"; };
+		889358571908B7E700148BA5 /* InstgramNearByViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstgramNearByViewController.m; sourceTree = "<group>"; };
+		889358591908B7FC00148BA5 /* InstgramHotRankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstgramHotRankViewController.h; sourceTree = "<group>"; };
+		8893585A1908B7FC00148BA5 /* InstgramHotRankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstgramHotRankViewController.m; sourceTree = "<group>"; };
+		8893585C1908B80A00148BA5 /* InstgramPersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstgramPersonalViewController.h; sourceTree = "<group>"; };
+		8893585D1908B80A00148BA5 /* InstgramPersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstgramPersonalViewController.m; sourceTree = "<group>"; };
+		8893585F1908B81A00148BA5 /* InstgramRelatedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstgramRelatedViewController.h; sourceTree = "<group>"; };
+		889358601908B81A00148BA5 /* InstgramRelatedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstgramRelatedViewController.m; sourceTree = "<group>"; };
+		889358621908B82700148BA5 /* InstgramTakePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstgramTakePhotoViewController.h; sourceTree = "<group>"; };
+		889358631908B82700148BA5 /* InstgramTakePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstgramTakePhotoViewController.m; sourceTree = "<group>"; };
+		889358671908D5CE00148BA5 /* hotRank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotRank.png; sourceTree = "<group>"; };
+		889358681908D5CE00148BA5 /* hotRank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hotRank@2x.png"; sourceTree = "<group>"; };
+		889358691908D5CE00148BA5 /* nearBy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nearBy.png; sourceTree = "<group>"; };
+		8893586A1908D5CE00148BA5 /* nearBy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nearBy@2x.png"; sourceTree = "<group>"; };
+		8893586B1908D5CE00148BA5 /* personal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personal.png; sourceTree = "<group>"; };
+		8893586C1908D5CE00148BA5 /* personal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "personal@2x.png"; sourceTree = "<group>"; };
+		8893586D1908D5CE00148BA5 /* related.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = related.png; sourceTree = "<group>"; };
+		8893586E1908D5CE00148BA5 /* related@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "related@2x.png"; sourceTree = "<group>"; };
+		8893586F1908D5CE00148BA5 /* takePhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = takePhoto.png; sourceTree = "<group>"; };
+		889358701908D5CE00148BA5 /* takePhoto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "takePhoto@2x.png"; sourceTree = "<group>"; };
+		889358821908DD7E00148BA5 /* InstgramSystem_Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstgramSystem_Info.h; sourceTree = "<group>"; };
+		889358831908DD7E00148BA5 /* InstgramSystem_Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstgramSystem_Info.m; sourceTree = "<group>"; };
+		889358851908DE0200148BA5 /* InstgramFoudation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstgramFoudation.h; sourceTree = "<group>"; };
+		889358861908DE0200148BA5 /* InstgramFoudation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstgramFoudation.m; sourceTree = "<group>"; };
+		889358881908E05500148BA5 /* nav_bar_bg_ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_bar_bg_ios7@2x.png"; sourceTree = "<group>"; };
+		889358891908E05500148BA5 /* nav_bar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_bar_bg@2x.png"; sourceTree = "<group>"; };
+		8893588A1908E05500148BA5 /* tabbarBackgroud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbarBackgroud@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				888CF66B190F4B85001BA2F1 /* CoreText.framework in Frameworks */,
 				8871E1F719079D84001723EE /* CoreGraphics.framework in Frameworks */,
 				8871E1F919079D85001723EE /* UIKit.framework in Frameworks */,
 				8871E1F519079D84001723EE /* Foundation.framework in Frameworks */,
@@ -77,6 +159,10 @@
 		8871E1E819079D83001723EE = {
 			isa = PBXGroup;
 			children = (
+				888CF65D190F43D8001BA2F1 /* InstgramWidgt */,
+				889358801908DD5800148BA5 /* InstgramFoudation */,
+				889358651908D52700148BA5 /* InstgramResource */,
+				8893583F1908AC5900148BA5 /* InstgramViewControllers */,
 				8871E1FA19079D85001723EE /* InstgramBeta */,
 				8871E21319079D85001723EE /* InstgramBetaTests */,
 				8871E1F319079D84001723EE /* Frameworks */,
@@ -96,6 +182,7 @@
 		8871E1F319079D84001723EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				888CF66A190F4B85001BA2F1 /* CoreText.framework */,
 				8871E1F419079D84001723EE /* Foundation.framework */,
 				8871E1F619079D84001723EE /* CoreGraphics.framework */,
 				8871E1F819079D84001723EE /* UIKit.framework */,
@@ -142,6 +229,162 @@
 				8871E21619079D85001723EE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		888CF65D190F43D8001BA2F1 /* InstgramWidgt */ = {
+			isa = PBXGroup;
+			children = (
+				888CF65E190F4463001BA2F1 /* InstgramTextBaseRun.h */,
+				888CF65F190F4463001BA2F1 /* InstgramTextBaseRun.m */,
+				888CF661190F48EA001BA2F1 /* InstgramTextAtRun.h */,
+				888CF662190F48EA001BA2F1 /* InstgramTextAtRun.m */,
+				888CF664190F4902001BA2F1 /* InstgramTextUrlRun.h */,
+				888CF665190F4902001BA2F1 /* InstgramTextUrlRun.m */,
+				888CF667190F491F001BA2F1 /* InstgramTextEmojiRun.h */,
+				888CF668190F491F001BA2F1 /* InstgramTextEmojiRun.m */,
+				888CF66C190F87B7001BA2F1 /* InstgramCoreTextView.h */,
+				888CF66D190F87B7001BA2F1 /* InstgramCoreTextView.m */,
+			);
+			path = InstgramWidgt;
+			sourceTree = "<group>";
+		};
+		889037A11915D2EA00A52C3C /* emotions */ = {
+			isa = PBXGroup;
+			children = (
+				889037A21915D2EA00A52C3C /* [smile].png */,
+			);
+			path = emotions;
+			sourceTree = "<group>";
+		};
+		8893583F1908AC5900148BA5 /* InstgramViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				889358401908ADAF00148BA5 /* InstgramAccontViewControllers */,
+				889358411908ADAF00148BA5 /* InstgramCommonViewControllers */,
+				889358421908ADAF00148BA5 /* InstgramHotRankViewControllers */,
+				889358431908ADAF00148BA5 /* InstgramNearByViewControllers */,
+				889358441908ADAF00148BA5 /* InstgramPersonalViewControllers */,
+				889358451908ADAF00148BA5 /* InstgramRelatedViewControllers */,
+				889358461908ADAF00148BA5 /* InstgramTakePhotoViewControllers */,
+			);
+			path = InstgramViewControllers;
+			sourceTree = "<group>";
+		};
+		889358401908ADAF00148BA5 /* InstgramAccontViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8893584A1908AEBB00148BA5 /* InstgramLoginViewController.h */,
+				8893584B1908AEBB00148BA5 /* InstgramLoginViewController.m */,
+			);
+			path = InstgramAccontViewControllers;
+			sourceTree = "<group>";
+		};
+		889358411908ADAF00148BA5 /* InstgramCommonViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				889358471908AE5600148BA5 /* InstgramRootViewController.h */,
+				889358481908AE5600148BA5 /* InstgramRootViewController.m */,
+				8893584D1908B2AE00148BA5 /* InstgramTabbarBaseViewController.h */,
+				8893584E1908B2AE00148BA5 /* InstgramTabbarBaseViewController.m */,
+				889358501908B32200148BA5 /* InstgramMainViewController.h */,
+				889358511908B32200148BA5 /* InstgramMainViewController.m */,
+				889358531908B42000148BA5 /* UINavigationController+InstgramNavigationController.h */,
+				889358541908B42000148BA5 /* UINavigationController+InstgramNavigationController.m */,
+			);
+			path = InstgramCommonViewControllers;
+			sourceTree = "<group>";
+		};
+		889358421908ADAF00148BA5 /* InstgramHotRankViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				889358591908B7FC00148BA5 /* InstgramHotRankViewController.h */,
+				8893585A1908B7FC00148BA5 /* InstgramHotRankViewController.m */,
+			);
+			path = InstgramHotRankViewControllers;
+			sourceTree = "<group>";
+		};
+		889358431908ADAF00148BA5 /* InstgramNearByViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				889358561908B7E700148BA5 /* InstgramNearByViewController.h */,
+				889358571908B7E700148BA5 /* InstgramNearByViewController.m */,
+			);
+			path = InstgramNearByViewControllers;
+			sourceTree = "<group>";
+		};
+		889358441908ADAF00148BA5 /* InstgramPersonalViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8893585C1908B80A00148BA5 /* InstgramPersonalViewController.h */,
+				8893585D1908B80A00148BA5 /* InstgramPersonalViewController.m */,
+			);
+			path = InstgramPersonalViewControllers;
+			sourceTree = "<group>";
+		};
+		889358451908ADAF00148BA5 /* InstgramRelatedViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8893585F1908B81A00148BA5 /* InstgramRelatedViewController.h */,
+				889358601908B81A00148BA5 /* InstgramRelatedViewController.m */,
+			);
+			path = InstgramRelatedViewControllers;
+			sourceTree = "<group>";
+		};
+		889358461908ADAF00148BA5 /* InstgramTakePhotoViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				889358621908B82700148BA5 /* InstgramTakePhotoViewController.h */,
+				889358631908B82700148BA5 /* InstgramTakePhotoViewController.m */,
+			);
+			path = InstgramTakePhotoViewControllers;
+			sourceTree = "<group>";
+		};
+		889358651908D52700148BA5 /* InstgramResource */ = {
+			isa = PBXGroup;
+			children = (
+				889358661908D52800148BA5 /* Images */,
+			);
+			path = InstgramResource;
+			sourceTree = "<group>";
+		};
+		889358661908D52800148BA5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				889037A11915D2EA00A52C3C /* emotions */,
+				889358881908E05500148BA5 /* nav_bar_bg_ios7@2x.png */,
+				889358891908E05500148BA5 /* nav_bar_bg@2x.png */,
+				8893588A1908E05500148BA5 /* tabbarBackgroud@2x.png */,
+				889358671908D5CE00148BA5 /* hotRank.png */,
+				889358681908D5CE00148BA5 /* hotRank@2x.png */,
+				889358691908D5CE00148BA5 /* nearBy.png */,
+				8893586A1908D5CE00148BA5 /* nearBy@2x.png */,
+				8893586B1908D5CE00148BA5 /* personal.png */,
+				8893586C1908D5CE00148BA5 /* personal@2x.png */,
+				8893586D1908D5CE00148BA5 /* related.png */,
+				8893586E1908D5CE00148BA5 /* related@2x.png */,
+				8893586F1908D5CE00148BA5 /* takePhoto.png */,
+				889358701908D5CE00148BA5 /* takePhoto@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		889358801908DD5800148BA5 /* InstgramFoudation */ = {
+			isa = PBXGroup;
+			children = (
+				889358811908DD5800148BA5 /* Core */,
+			);
+			path = InstgramFoudation;
+			sourceTree = "<group>";
+		};
+		889358811908DD5800148BA5 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				889358821908DD7E00148BA5 /* InstgramSystem_Info.h */,
+				889358831908DD7E00148BA5 /* InstgramSystem_Info.m */,
+				889358851908DE0200148BA5 /* InstgramFoudation.h */,
+				889358861908DE0200148BA5 /* InstgramFoudation.m */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +435,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = imac;
 				TargetAttributes = {
+					8871E1F019079D84001723EE = {
+						DevelopmentTeam = AJF7YBKTJW;
+					};
 					8871E20B19079D85001723EE = {
 						TestTargetID = 8871E1F019079D84001723EE;
 					};
@@ -220,8 +466,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				889037A31915D2EB00A52C3C /* [smile].png in Resources */,
+				889358761908D5CE00148BA5 /* personal@2x.png in Resources */,
+				889358711908D5CE00148BA5 /* hotRank.png in Resources */,
+				889358741908D5CE00148BA5 /* nearBy@2x.png in Resources */,
+				8893588D1908E05500148BA5 /* tabbarBackgroud@2x.png in Resources */,
+				889358731908D5CE00148BA5 /* nearBy.png in Resources */,
+				8893587A1908D5CE00148BA5 /* takePhoto@2x.png in Resources */,
+				889358781908D5CE00148BA5 /* related@2x.png in Resources */,
+				889358791908D5CE00148BA5 /* takePhoto.png in Resources */,
+				8893588C1908E05500148BA5 /* nav_bar_bg@2x.png in Resources */,
 				8871E1FF19079D85001723EE /* InfoPlist.strings in Resources */,
+				889358751908D5CE00148BA5 /* personal.png in Resources */,
+				889358721908D5CE00148BA5 /* hotRank@2x.png in Resources */,
+				889358771908D5CE00148BA5 /* related.png in Resources */,
 				8871E20719079D85001723EE /* Images.xcassets in Resources */,
+				8893588B1908E05500148BA5 /* nav_bar_bg_ios7@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,8 +500,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				889358551908B42000148BA5 /* UINavigationController+InstgramNavigationController.m in Sources */,
+				889358641908B82700148BA5 /* InstgramTakePhotoViewController.m in Sources */,
+				888CF663190F48EA001BA2F1 /* InstgramTextAtRun.m in Sources */,
 				8871E20119079D85001723EE /* main.m in Sources */,
+				888CF666190F4902001BA2F1 /* InstgramTextUrlRun.m in Sources */,
+				8893584F1908B2AE00148BA5 /* InstgramTabbarBaseViewController.m in Sources */,
+				8893584C1908AEBB00148BA5 /* InstgramLoginViewController.m in Sources */,
+				889358491908AE5600148BA5 /* InstgramRootViewController.m in Sources */,
+				889358521908B32200148BA5 /* InstgramMainViewController.m in Sources */,
+				888CF660190F4463001BA2F1 /* InstgramTextBaseRun.m in Sources */,
+				888CF669190F491F001BA2F1 /* InstgramTextEmojiRun.m in Sources */,
+				8893585E1908B80A00148BA5 /* InstgramPersonalViewController.m in Sources */,
+				889358581908B7E700148BA5 /* InstgramNearByViewController.m in Sources */,
 				8871E20519079D85001723EE /* InstgramAppDelegate.m in Sources */,
+				8893585B1908B7FC00148BA5 /* InstgramHotRankViewController.m in Sources */,
+				889358611908B81A00148BA5 /* InstgramRelatedViewController.m in Sources */,
+				889358871908DE0200148BA5 /* InstgramFoudation.m in Sources */,
+				889358841908DD7E00148BA5 /* InstgramSystem_Info.m in Sources */,
+				888CF66E190F87B7001BA2F1 /* InstgramCoreTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,11 +637,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InstgramBeta/InstgramBeta-Prefix.pch";
 				INFOPLIST_FILE = "InstgramBeta/InstgramBeta-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -374,11 +654,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InstgramBeta/InstgramBeta-Prefix.pch";
 				INFOPLIST_FILE = "InstgramBeta/InstgramBeta-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -444,6 +727,7 @@
 				8871E21F19079D85001723EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8871E22019079D85001723EE /* Build configuration list for PBXNativeTarget "InstgramBetaTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +736,7 @@
 				8871E22219079D85001723EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

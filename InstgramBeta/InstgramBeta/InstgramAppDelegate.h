@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InstgramLoginViewController.h"
 
 @interface InstgramAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) InstgramLoginViewController* loginVC;
 
 @end
