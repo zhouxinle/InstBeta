@@ -181,10 +181,10 @@
                 
                 CGRect runRect = CGRectMake(runPointX, runPointY, runWidth, runHeight);
                 
+                //绘制表情和url图标
                 BOOL isDraw = [run drawRunWithRect:runRect];
                 
-                if (!isDraw)
-                {
+                //url和@响应点击
                     if (run.isResponseTouch)
                     {
                         [self.responseTouchRunRectDic setObject:run forKey:[NSValue valueWithCGRect:runRect]];
@@ -194,7 +194,7 @@
                         runRect.origin.x = runPointX;
                         [self.responseTouchRunRectDic setObject:run forKey:[NSValue valueWithCGRect:runRect]];
                     }
-                }
+                
             }
             
             CFRelease(runRef);
@@ -384,11 +384,13 @@
     //原始text中的表情字符串换成@" "  并且在self.runsArray中加入InstgramTextEmojiRun对象
     NSString* analyedText = [InstgramTextEmojiRun analyseText:text andRunsObjectArray:&runs];
     
+    //利用正则找出text中的url，在self.runsArray中加入InstgramTextUrlRun对象
+    analyedText = [InstgramTextUrlRun analyseText:analyedText andRunsObjectArray:&runs];
+    
     //利用正则找出@
     analyedText = [InstgramTextAtRun analyseText:analyedText andRunsObjectArray:&runs];
     
-    //利用正则找出text中的url，在self.runsArray中加入InstgramTextUrlRun对象
-    analyedText = [InstgramTextUrlRun analyseText:analyedText andRunsObjectArray:&runs];
+
     
 
     
@@ -396,6 +398,26 @@
     [self.runsArray makeObjectsPerformSelector:@selector(setOriginalFont:) withObject:_textFont];
     
     return analyedText;
+}
+
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    CGPoint location = [(UITouch *)[touches anyObject] locationInView:self];
+    CGPoint runLocation = CGPointMake(location.x, self.frame.size.height - location.y);
+
+        [self.responseTouchRunRectDic enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop)
+         {
+             //__weak TQRichTextView *weakSelf = self;
+             CGRect rect = [((NSValue *)key) CGRectValue];
+             InstgramTextBaseRun *run = obj;
+             if(CGRectContainsPoint(rect, runLocation))
+             {
+                 //[weakSelf.delegage richTextView:weakSelf touchEndRun:run];
+                 NSLog(@"run.text = %@",run.originalText);
+             }
+         }];
+
 }
 
 

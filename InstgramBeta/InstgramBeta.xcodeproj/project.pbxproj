@@ -26,6 +26,7 @@
 		888CF66B190F4B85001BA2F1 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 888CF66A190F4B85001BA2F1 /* CoreText.framework */; };
 		888CF66E190F87B7001BA2F1 /* InstgramCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 888CF66D190F87B7001BA2F1 /* InstgramCoreTextView.m */; };
 		889037A31915D2EB00A52C3C /* [smile].png in Resources */ = {isa = PBXBuildFile; fileRef = 889037A21915D2EA00A52C3C /* [smile].png */; };
+		889037A5191637FA00A52C3C /* link@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 889037A4191637FA00A52C3C /* link@2x.png */; };
 		889358491908AE5600148BA5 /* InstgramRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 889358481908AE5600148BA5 /* InstgramRootViewController.m */; };
 		8893584C1908AEBB00148BA5 /* InstgramLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893584B1908AEBB00148BA5 /* InstgramLoginViewController.m */; };
 		8893584F1908B2AE00148BA5 /* InstgramTabbarBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8893584E1908B2AE00148BA5 /* InstgramTabbarBaseViewController.m */; };
@@ -92,6 +93,7 @@
 		888CF66C190F87B7001BA2F1 /* InstgramCoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstgramCoreTextView.h; sourceTree = "<group>"; };
 		888CF66D190F87B7001BA2F1 /* InstgramCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstgramCoreTextView.m; sourceTree = "<group>"; };
 		889037A21915D2EA00A52C3C /* [smile].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "[smile].png"; sourceTree = "<group>"; };
+		889037A4191637FA00A52C3C /* link@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "link@2x.png"; sourceTree = "<group>"; };
 		889358471908AE5600148BA5 /* InstgramRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstgramRootViewController.h; sourceTree = "<group>"; };
 		889358481908AE5600148BA5 /* InstgramRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstgramRootViewController.m; sourceTree = "<group>"; };
 		8893584A1908AEBB00148BA5 /* InstgramLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstgramLoginViewController.h; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 		889358661908D52800148BA5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				889037A4191637FA00A52C3C /* link@2x.png */,
 				889037A11915D2EA00A52C3C /* emotions */,
 				889358881908E05500148BA5 /* nav_bar_bg_ios7@2x.png */,
 				889358891908E05500148BA5 /* nav_bar_bg@2x.png */,
@@ -475,6 +478,7 @@
 				8893587A1908D5CE00148BA5 /* takePhoto@2x.png in Resources */,
 				889358781908D5CE00148BA5 /* related@2x.png in Resources */,
 				889358791908D5CE00148BA5 /* takePhoto.png in Resources */,
+				889037A5191637FA00A52C3C /* link@2x.png in Resources */,
 				8893588C1908E05500148BA5 /* nav_bar_bg@2x.png in Resources */,
 				8871E1FF19079D85001723EE /* InfoPlist.strings in Resources */,
 				889358751908D5CE00148BA5 /* personal.png in Resources */,

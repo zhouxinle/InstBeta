@@ -21,7 +21,7 @@
 }
 
 /**
- *  识别出text中的url
+ *  识别出text中的url url替换成@" "
  *
  *  @param text      文本
  *  @param runsArray
@@ -30,27 +30,36 @@
  */
 + (NSString*)analyseText:(NSString*)text andRunsObjectArray:(NSMutableArray**)runsArray
 {
+    
+    NSMutableString* newString = [NSMutableString stringWithString:text];
+    
     NSError *error;
 
     //正则表达式
-    NSString *regulaStr = @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|(www.[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)";
+    NSString *regulaStr = @"(https?|ftp|file)://[-A-Z0-9+&#/%?=~_|!:,.;]*[-A-Z0-9+&#/%=~_|]";
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regulaStr
                                                                            options:NSRegularExpressionCaseInsensitive
                                                                              error:&error];
-    NSArray *arrayOfAllMatches = [regex matchesInString:text options:0 range:NSMakeRange(0, [text length])];
+    NSArray *arrayOfAllMatches = [regex matchesInString:newString options:0 range:NSMakeRange(0, [newString length])];
+
+    int offset = 0;
     
     for (NSTextCheckingResult* match in arrayOfAllMatches)
     {
-        NSString* matchString = [text substringWithRange:match.range];
+        NSRange range = NSMakeRange(match.range.location - offset, match.range.length);
+        NSString* matchString = [newString substringWithRange:range];
         //url run对象
         InstgramTextUrlRun* urlRun = [[InstgramTextUrlRun alloc] init];
         urlRun.originalText = matchString;
-        urlRun.range = match.range;
+        [newString replaceCharactersInRange:range withString:@" "];
+        NSRange urlRange = NSMakeRange(range.location, 1);
+        urlRun.range = urlRange;
+        offset = match.range.length - 1;
         
         [*runsArray addObject:urlRun];
     }
 
-    return text;
+    return newString;
 }
 
 /**
@@ -62,15 +71,72 @@
  */
 - (BOOL)drawRunWithRect:(CGRect)rect
 {
-    return NO;
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    NSString *urlImageString = @"link.png";
+    
+    UIImage *image = [UIImage imageNamed:urlImageString];
+    if (image)
+    {
+        CGContextDrawImage(context, rect, image.CGImage);
+    }
+    return  YES;
 }
 
 - (void)attributedStringAddAttribute:(NSMutableAttributedString *)attributedString
 {
-    //设置url文本显示的颜色
-    [attributedString addAttribute:(NSString*)kCTForegroundColorAttributeName value:(id)[UIColor blueColor].CGColor range:self.range];
+    //删除占位符 @" "
+    [attributedString deleteCharactersInRange:self.range];
+    
+    CTRunDelegateCallbacks urlCallbacks;
+    urlCallbacks.version      = kCTRunDelegateVersion1;
+    urlCallbacks.dealloc      = InstgramTextRunUrlDelegateDeallocCallback;
+    urlCallbacks.getAscent    = InstgramTextRunUrlDelegateGetAscentCallback;
+    urlCallbacks.getDescent   = InstgramTextRunUrlDelegateGetDescentCallback;
+    urlCallbacks.getWidth     = InstgramTextRunUrlDelegateGetWidthCallback;
+    
+    NSMutableAttributedString *imageAttributedString = [[NSMutableAttributedString alloc] initWithString:@" "];
+    
+    //创建CTRun回调
+    CTRunDelegateRef runDelegate = CTRunDelegateCreate(&urlCallbacks, (__bridge void*)self);
+    [imageAttributedString addAttribute:(NSString *)kCTRunDelegateAttributeName value:(__bridge id)runDelegate range:NSMakeRange(0, 1)];
+    CFRelease(runDelegate);
+    
+    // imageAttributedString: CTRunDelegate = "<CTRunDelegate 0x8d300a0 [0x1a01ec8]>
+    [attributedString insertAttributedString:imageAttributedString atIndex:self.range.location];
+    
     [super attributedStringAddAttribute:attributedString];
-
 }
+
+/**
+ *  callback
+ */
+void InstgramTextRunUrlDelegateDeallocCallback(void *refCon)
+{
+    
+}
+
+//--上缘高度
+CGFloat InstgramTextRunUrlDelegateGetAscentCallback(void *refCon)
+{
+    InstgramTextUrlRun* urlRun =(__bridge InstgramTextUrlRun *) refCon;
+    return urlRun.originalFont.ascender ;
+}
+
+//--下缘高度
+CGFloat InstgramTextRunUrlDelegateGetDescentCallback(void *refCon)
+{
+    InstgramTextUrlRun* urlRun =(__bridge InstgramTextUrlRun *) refCon;
+    return urlRun.originalFont.descender;
+}
+
+//-- 宽
+CGFloat InstgramTextRunUrlDelegateGetWidthCallback(void *refCon)
+{
+    return 50;
+//    InstgramTextEmojiRun* emojiRun =(__bridge InstgramTextEmojiRun *) refCon;
+//    return (emojiRun.originalFont.ascender - emojiRun.originalFont.descender);
+}
+
+
 
 @end

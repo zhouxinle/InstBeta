@@ -89,7 +89,6 @@
 
 - (void)attributedStringAddAttribute:(NSMutableAttributedString *)attributedString
 {
-    
     //删除占位符 @" "
     [attributedString deleteCharactersInRange:self.range];
     
