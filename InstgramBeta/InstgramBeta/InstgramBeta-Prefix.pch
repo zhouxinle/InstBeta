@@ -11,6 +11,51 @@
 #endif
 
 #ifdef __OBJC__
+    #define kViewBgColor                (0xf4f4f4)      // 通用 viewcontroller.view 背景色
+    #define kFontColorGray              (0x999999)      // 文字浅灰
+    #define kDefaultFontName @"Arial Rounded MT Bold"
+    #define kTextFieldFont              (17.0f)             // 输入框通用字体大小
+
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "InstagramExtensionsHeader.h"
+
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+#define IOS7_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending )
+#define IOS6_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"6.0"] != NSOrderedAscending )
+#define IOS5_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"5.0"] != NSOrderedAscending )
+#define IOS4_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"4.0"] != NSOrderedAscending )
+#define IOS3_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"3.0"] != NSOrderedAscending )
+
+#else	// #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+
+#define IOS6_OR_LATER	(NO)
+#define IOS5_OR_LATER	(NO)
+#define IOS4_OR_LATER	(NO)
+#define IOS3_OR_LATER	(NO)
+
+#endif	// #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+
+#undef	AS_SINGLETON
+#define AS_SINGLETON( __class ) \
++ (__class *)sharedInstance;
+
+#undef	DEF_SINGLETON
+#define DEF_SINGLETON( __class ) \
++ (__class *)sharedInstance \
+{ \
+static dispatch_once_t once; \
+static __class * __singleton__; \
+dispatch_once( &once, ^{ __singleton__ = [[__class alloc] init]; } ); \
+return __singleton__; \
+}
+
+#define UNUSED_VAR __attribute__((unused))
+
+
+static NSString* const HTTPREQUEST_BASE_URL = @"http://192.168.4.133:8080/Tieba/";
+#define REQUEST_TIMEOUT   (30)
+
+
+
 #endif

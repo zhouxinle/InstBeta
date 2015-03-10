@@ -10,29 +10,29 @@
 	<string>InstgramBeta</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>D4496FC9-7B4C-4AF7-8633-5D4CD5B02066</key>
+		<key>C51939B0493D3F58DDD0F53647A449D6ECA35C08</key>
 		<string>https://github.com/zhouxinle/InstBeta.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>InstgramBeta/InstgramBeta.xcodeproj/project.xcworkspace</string>
+	<string>InstgramBeta/InstgramBeta.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>D4496FC9-7B4C-4AF7-8633-5D4CD5B02066</key>
+		<key>C51939B0493D3F58DDD0F53647A449D6ECA35C08</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/zhouxinle/InstBeta.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D4496FC9-7B4C-4AF7-8633-5D4CD5B02066</string>
+	<string>C51939B0493D3F58DDD0F53647A449D6ECA35C08</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D4496FC9-7B4C-4AF7-8633-5D4CD5B02066</string>
+			<string>C51939B0493D3F58DDD0F53647A449D6ECA35C08</string>
 			<key>IDESourceControlWCCName</key>
 			<string>InstBeta</string>
 		</dict>

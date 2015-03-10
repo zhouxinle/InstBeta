@@ -7,8 +7,14 @@
 //
 
 #import "InstgramPersonalViewController.h"
+#import "PersonalPageHeaderView.h"
+#import "InstgramSNSActionController.h"
 
-@interface InstgramPersonalViewController ()
+@interface InstgramPersonalViewController ()<UITableViewDataSource,UITableViewDelegate,InstgramActionSNSDelegate>
+{
+    UITableView* _personalTableView;
+    PersonalPageHeaderView* _headerView;
+}
 
 @end
 
@@ -27,6 +33,8 @@
 {
     [super viewDidLoad];
     
+    [self setupParams];
+    
     [self setupView];
 	// Do any additional setup after loading the view.
 }
@@ -39,9 +47,57 @@
 
 #pragma mark - Private Methods
 
+- (void)setupParams
+{
+    
+}
+
 - (void)setupView
 {
     [self setNavigationTitle:@"Personal"];
+
+    _personalTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    [_personalTableView setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+    _personalTableView.delegate = self;
+    _personalTableView.dataSource = self;
+    [_personalTableView setTableHeaderView:[[PersonalPageHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, [PersonalPageHeaderView caculateHeight:InitialSetUp])]];
+    [self.view addSubview:_personalTableView];
+}
+
+#pragma mark - UITableViewDelegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 6;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell* cell = nil;
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    
+}
+
+#pragma mark - InstgramActionSNSDelegate
+
+- (void)viewPersonalPageSucc:(NSDictionary *)result
+{
+    
+}
+
+- (void)viewPersonalPageFailed:(NSError *)error
+{
+    
 }
 
 @end

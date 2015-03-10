@@ -59,17 +59,21 @@
 //    [label setText:string];
 //    
 //    [self.view addSubview:label];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    //ios7
+    //self.edgesForExtendedLayout = UIRectEdgeNone;
+
+
+    NSString* text = @"飒飒撒飒 飒[smile]大神大@acccccchttp://dsadasdasdjl.com@ccccccccccccccccccccccccccccccccccccccccccccccchttp://adASDasdaSDasdADASDASDasd.comsadajskd的@撒旦就啊；六十多级啊；拉斯克奖的；拉萨看见的dasjda;LKSJD;asjdlkASJDLk;asdjfadsfsafdshalkjfhaskldhfksadhfkasdhk倒萨大客户ASKDHADHKASFHWQU";
     InstgramCoreTextView* coreView = [[InstgramCoreTextView alloc] initWithFrame:CGRectMake(20, self.view.bounds.origin.y + 20, 280, 0)];
     [coreView setBackgroundColor:[UIColor clearColor]];
-
-    NSString* text = @"飒飒撒飒 飒[smile]大神大@achttp://dsadasdasdjl.com@大手大脚HASDJH熬枯受淡KJLASDD就阿斯顿甲ALKSDJ拉克你好你阿訇你好丝http://adASDasdaSDasdADASDASDasd.comsadajskd的撒旦就啊；六十多级啊；拉斯克奖的；拉萨看见的dasjda;LKSJD;asjdlkASJDLk;asdjfadsfsafdshalkjfhaskldhfksadhfkasdhk倒萨大客户ASKDHADHKASFHWQU";
     [coreView setText:text];
     [coreView setTextColor:[UIColor blackColor]];
     [coreView setTextFont:[UIFont systemFontOfSize:17.0f]];
     [coreView setLineSpacing:1.5f];
+    //[coreView drawText];
     CGFloat height = [coreView caculateHeight];
-//    CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:17.0f] constrainedToSize:CGSizeMake(coreView.bounds.size.width, MAXFLOAT)];
+////    CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:17.0f] constrainedToSize:CGSizeMake(coreView.bounds.size.width, MAXFLOAT)];
     [coreView setFrame:CGRectMake(20, 20, coreView.bounds.size.width, height)];
 
     [self.view addSubview:coreView];

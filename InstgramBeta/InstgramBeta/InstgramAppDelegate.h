@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "InstgramLoginViewController.h"
+#import "InstgramFirstViewController.h"
 
-@interface InstgramAppDelegate : UIResponder <UIApplicationDelegate>
+@interface InstgramAppDelegate : UIResponder <UIApplicationDelegate,UINavigationControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) InstgramLoginViewController* loginVC;
+@property (strong, nonatomic) UINavigationController* nav;
+@property (strong, nonatomic) InstgramFirstViewController* firstVC;
 
 @end

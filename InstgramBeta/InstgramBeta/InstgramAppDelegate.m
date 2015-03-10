@@ -7,17 +7,24 @@
 //
 
 #import "InstgramAppDelegate.h"
+#import "UINavigationController+InstgramNavigationController.h"
 
 @implementation InstgramAppDelegate
+
+@synthesize window,nav,firstVC;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    
-    self.loginVC = [[InstgramLoginViewController alloc] initWithNibName:nil bundle:nil];
-    [self.window setRootViewController:self.loginVC];
+
+    self.firstVC = [[InstgramFirstViewController alloc] initWithNibName:nil bundle:nil];
+    CustomNavigationBar* customBar = [[CustomNavigationBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    self.nav  = [[UINavigationController alloc] initWithRootViewController:self.firstVC withCustomNavBar:customBar];
+//    self.nav = [[UINavigationController alloc] initWithRootViewController:self.firstVC];
+    self.nav.delegate = self;
+    [self.window setRootViewController:self.nav];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -49,6 +56,18 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - UINavigationControllerDelegate
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    if (viewController == self.firstVC) {
+        [self.nav setNavigationBarHidden:YES animated:animated];
+    }
+    else
+    {
+        [self.nav setNavigationBarHidden:NO animated:animated];
+    }
 }
 
 @end
